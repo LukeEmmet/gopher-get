@@ -6,15 +6,30 @@ This client is adapted from the example client from the https://github.com/prolo
 
 # Features
 
-* Download a gopher page or stream to stdout
+* Download a gopher page to a specified location
+* Prints a description of the item type 
 * Erm thats it
 
 # Usage
 
 ```
 
-gopher-get -o <outputfile> <url>
-
--o output file (uses stdout if not provided)
+gopher-get <url> <outputfile>
 
 ```
+
+## Flags
+
+```
+-json    if content is a gophermap, output json
+```
+
+## Todo
+
+Possible features to come:
+
+* [ ] allow stream content to stdout
+* [ ] add -o for output file
+* [ ] maybe remove json option
+* [ ] move display of item type to stderr
+* [ ] add download abandoning if content exceeds a size/timeout threshold 
